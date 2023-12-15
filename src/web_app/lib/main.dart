@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Mi segunda aplicacion bien pocha',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -91,12 +91,25 @@ class _MyHomePageState extends State<MyHomePage> {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        const Text(
-          'You have pushed the button this many times:',
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          
+          child: Text(
+            'Counter',
+            style: TextStyle(
+              fontSize: 50,
+              fontWeight: FontWeight.w700,
+              color: Colors.purple,
+            ),
+          ),
         ),
         Text(
           '$_counter',
-          style: Theme.of(context).textTheme.headlineMedium,
+          style: const TextStyle(
+            fontSize: 60,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey,
+          ),
         ),
       ],
     ),
@@ -109,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
-      SizedBox(width: 16), // Adjust the spacing between buttons as needed
+      const SizedBox(width: 16), // Adjust the spacing between buttons as needed
       FloatingActionButton(
         onPressed: _decrementCounter,
         tooltip: 'Decrement',
